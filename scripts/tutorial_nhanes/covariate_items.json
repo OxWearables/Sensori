@@ -1,0 +1,139 @@
+{
+	"baseline": [
+		"Ethnic background",
+		"Sex",
+		"Alcohol drinker status",
+		"Current tobacco smoking",
+		"age",
+		"BMI"
+	],
+	"age_sex_BMI": [
+		"Sex",
+		"age",
+		"BMI"
+	],
+	"common_items": [
+		"Regular alcohol drinking",
+		"Current tobacco smoking",
+		"Overall health rating"
+	],
+	"accavg_accstd": [
+		"acc-overall-avg",
+		"acc-overall-sd"
+	],
+	"all_devices": [
+		"acc-overall-avg",
+		"acc-overall-sd",
+		"light-overall-avg",
+		"moderate-vigorous-overall-avg",
+		"sedentary-overall-avg",
+		"MET-overall-avg",
+		"StepsDayAvgAdjusted",
+		"WalkingDayAvgAdjusted(mins)",
+		"CadencePeak1Adjusted(steps/min)",
+		"CadencePeak30Adjusted(steps/min)",
+		"Cadence95thAdjusted(steps/min)",
+		"overall_mean_sol_min",
+		"overall_mean_tst_min",
+		"overall_mean_waso_min",
+		"overall_mean_se_perc",
+		"overall_mean_wake_min",
+		"overall_mean_nrem_min",
+		"overall_mean_rem_min"
+	],
+	"all_devices_accel": [
+		"acc-overall-avg",
+		"acc-overall-sd",
+		"light-overall-avg",
+		"moderate-vigorous-overall-avg",
+		"sedentary-overall-avg",
+		"MET-overall-avg"
+	],
+	"all_devices_sleep": [
+		"overall_mean_sol_min",
+		"overall_mean_tst_min",
+		"overall_mean_waso_min",
+		"overall_mean_se_perc",
+		"overall_mean_wake_min",
+		"overall_mean_nrem_min",
+		"overall_mean_rem_min"
+	],
+	"all_devices_step": [
+		"StepsDayAvgAdjusted",
+		"WalkingDayAvgAdjusted(mins)",
+		"CadencePeak1Adjusted(steps/min)",
+		"CadencePeak30Adjusted(steps/min)",
+		"Cadence95thAdjusted(steps/min)"
+	],
+	"physical": [
+		"FEV1_arr",
+		"forced_vital_capacity_arr",
+		"hand_grip_left",
+		"hand_grip_right",
+		"waist_circumference",
+		"hip_circumference",
+		"standing_height",
+		"seated_height",
+		"diastolic_blood_pressure_arr",
+		"systolic_blood_pressure_arr",
+		"pulse_rate_arr",
+		"basal_metabolic_rate",
+		"weight",
+		"body_fat_percentage",
+		"trunk_fast_percentage",
+		"arm_fat_percentage_left",
+		"arm_fat_percentage_right",
+		"whole_body_fat_mass",
+		"PEF"
+	],
+	"ukb_health": [
+		"Long-standing illness, disability or infirmity",
+		"Getting up in morning",
+		"Morning/evening person (chronotype)",
+		"Nap during day",
+		"Sleeplessness / insomnia",
+		"Daytime dozing / sleeping",
+		"Mood swings",
+		"Snoring",
+		"Health satisfaction",
+		"Happiness",
+		"Frequency of tiredness / lethargy in last 2 weeks",
+		"Shortness of breath walking on level ground",
+		"Usual walking pace",
+		"Frequency of stair climbing in last 4 weeks",
+		"Wheeze or whistling in the chest in last year"
+	],
+	"elsa_physical_function": [
+		"Mobility: difficulty walking 100 yards",
+		"Mobility: difficulty sitting 2 hours",
+		"Mobility: difficulty getting up from chair after sitting long periods",
+		"Mobility: difficulty climbing several flights stairs without resting",
+		"Mobility: difficulty climbing one flight stairs without resting",
+		"Mobility: difficulty stooping, kneeling or crouching",
+		"Mobility: difficulty reaching or extending arms above shoulder level",
+		"Mobility: difficulty pulling or pushing large objects",
+		"Mobility: difficulty lifting or carrying weights over 10 pounds",
+		"Mobility: difficulty picking up 5p coin from table"
+	],
+	"nhanes_physical_function": [
+		"difficulty_walk_quarter_mile",
+		"difficulty_walk_ten_steps",
+		"difficulty_stoop_crouch_kneel",
+		"difficulty_lift_carry",
+		"difficulty_house_chores",
+		"difficulty_prepare_meals",
+		"difficulty_walk_between_rooms",
+		"difficulty_stand_from_chair",
+		"difficulty_get_in_out_bed",
+		"difficulty_eat_utensils",
+		"difficulty_dress_self",
+		"difficulty_stand_long",
+		"difficulty_sit_long",
+		"difficulty_reach_overhead",
+		"difficulty_grasp_small_objects",
+		"difficulty_go_out_events",
+		"difficulty_attend_social",
+		"difficulty_leisure_home",
+		"difficulty_push_pull_large"
+	]
+}

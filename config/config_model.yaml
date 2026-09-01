@@ -1,0 +1,26 @@
+# Conv1D configuration
+in_channels: 3
+norm_mode: group_norm
+conv_bias: false
+conv_layer_config: [
+  [512, 10, 5],
+  [512, 3, 2],
+  [512, 3, 2],
+  [512, 3, 2],
+  [512, 2, 2],
+  [512, 2, 2],
+  [512, 2, 2],
+]
+
+# Transformer Configuration
+dropout: 0.1
+window_len: 5 # minutes represented by each Transformer token
+conv_pos: 32 # 160 minutes with 5-minute tokens
+conv_pos_groups: 16
+encoder_ffn_embed_dim: 1024
+encoder_attention_heads: 12
+activation_fn: gelu
+encoder_dim: 768
+encoder_layers: 8
+encoder_layerdrop: 0.1
+positional_embedding: relative # absolute or relative

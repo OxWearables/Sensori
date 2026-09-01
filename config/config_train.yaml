@@ -1,0 +1,62 @@
+defaults:
+  - config_model
+  - _self_
+
+# Data
+train_data:
+  data_path: /path/to/your_preprocessed_data
+  batch_size: 20
+  num_workers: 4
+  persistent_workers: true
+  prefetch_factor: 1
+  augmentation:
+    enabled: true
+    axis_scale_std: 0.1
+
+# Optional unaugmented day embeddings, extracted by the training DDP workers.
+test_data:
+  datasets: {} # e.g. {cohort1: /path/to/cohort1, cohort2: /path/to/cohort2}
+  every_n_epochs: 20
+  batch_size: 100
+  num_workers: 6
+  prefetch_factor: 2
+
+seed: 77
+
+# Pretraining
+learning_rate: 1e-4
+lr_scheduler: cosine
+warmup_length: 2000
+lr_t0: 4000
+
+## Masked sensor
+mask_feature_prob: 0.5 # span budget; overlap makes the final masked-token fraction lower
+mask_feature_length: 2
+n_negatives: 30
+cross_sample_negatives: 0
+weighted_masking: false
+
+accelerator: gpu
+strategy: auto # [auto, ddp]
+device_num: 1
+precision: bf16-mixed
+epoch_len: 3000
+model_compile: true
+print_model_summary: true
+logit_temp: 0.1
+masked_logit_temp: 0.1
+contrastive_weight: 0.1
+discard_last_bin: true
+percentage_bin_num: 10
+movement_rank_weight: 0.0
+movement_logit_temp: 0.1
+contrastive_loss_start_epoch: 280
+contrastive_loss_warmup_epochs: 10
+
+# Logging
+wb_mode: disabled # use [online] to enable wandb logging
+log_dir: ./outputs
+exp_name: pretraining
+save_model: true
+checkpoint_interval: 10
+log_step: 5

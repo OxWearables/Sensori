@@ -1,0 +1,26 @@
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div>
+      <a class="wordmark wordmark-light" href="{{ '/' | relative_url }}">
+        <span class="movement-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+        <span>Sensori</span>
+      </a>
+      <p>A foundation model for 24-hour wrist movement.</p>
+    </div>
+    <div>
+      <p class="footer-label">Explore</p>
+      {% for item in site.data.navigation %}
+        <a href="{{ item.url | relative_url }}">{{ item.label }}</a>
+      {% endfor %}
+    </div>
+    <div>
+      <p class="footer-label">Stay informed</p>
+      <a href="{{ '/white-paper/' | relative_url }}">Read the white paper</a>
+      <a href="{{ '/resources/#citation' | relative_url }}">Cite Sensori</a>
+    </div>
+  </div>
+  <div class="shell footer-bottom">
+    <p>Built for open research.</p>
+    <p>&copy; {{ 'now' | date: '%Y' }} Sensori research team.</p>
+  </div>
+</footer>

@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<article class="white-paper-page">
+  <header class="white-paper-hero shell">
+    <div class="white-paper-meta">
+      <p class="eyebrow">{{ page.eyebrow }}</p>
+      <span>{{ page.status }}</span>
+    </div>
+    <h1>{{ page.title }}</h1>
+    {% if page.author or page.date %}
+      <p class="white-paper-byline">
+        {% if page.author %}<span>By {{ page.author }}</span>{% endif %}
+        {% if page.author and page.date %}<i aria-hidden="true">·</i>{% endif %}
+        {% if page.date %}<time datetime="{{ page.date | date: '%Y-%m-%d' }}">Published {{ page.date | date: "%d %B %Y" }}</time>{% endif %}
+      </p>
+    {% endif %}
+    <p class="article-deck">{{ page.intro }}</p>
+  </header>
+
+  <div class="white-paper-rule shell" aria-hidden="true"><span></span><i></i></div>
+
+  <div class="white-paper-body shell">
+    <aside>
+      <p class="aside-label">The premise</p>
+      <blockquote>{{ page.premise }}</blockquote>
+    </aside>
+    <div class="prose white-paper-prose">
+      {{ content }}
+    </div>
+  </div>
+</article>

@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<article class="tutorial-page shell">
+  <header class="tutorial-header">
+    <a class="back-link" href="{{ '/tutorials/' | relative_url }}"><span aria-hidden="true">←</span> All tutorials</a>
+    <p class="eyebrow">Tutorial {{ page.order | prepend: '0' | slice: -2, 2 }}</p>
+    <h1>{{ page.title }}</h1>
+    <p class="article-deck">{{ page.subtitle }}</p>
+    <div class="tutorial-meta">
+      <span>{{ page.level }}</span><span>{{ page.duration }}</span>
+      {% if page.source_notebook %}
+        <a class="tutorial-source" href="{{ site.repository_url }}/blob/main/{{ page.source_notebook }}" target="_blank" rel="noopener noreferrer">Open source notebook <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+      {% endif %}
+    </div>
+  </header>
+  <div class="tutorial-layout">
+    <aside class="tutorial-rail">
+      <p class="aside-label">In this guide</p>
+      <ol>
+        {% for heading in page.steps %}<li><a href="#{{ heading.id }}">{{ heading.label }}</a></li>{% endfor %}
+      </ol>
+    </aside>
+    <div class="prose tutorial-prose">{{ content }}</div>
+  </div>
+</article>
+{% if page.tutorial_previous or page.tutorial_next %}
+  <nav class="tutorial-pager shell" aria-label="Tutorial sequence">
+    {% if page.tutorial_previous %}
+      <a class="tutorial-pager-link tutorial-pager-previous" href="{{ page.tutorial_previous.url | relative_url }}">
+        <span><i aria-hidden="true">←</i> Previous</span>
+        <strong>{{ page.tutorial_previous.title }}</strong>
+      </a>
+    {% endif %}
+    {% if page.tutorial_next %}
+      <a class="tutorial-pager-link tutorial-pager-next" href="{{ page.tutorial_next.url | relative_url }}">
+        <span>Next <i aria-hidden="true">→</i></span>
+        <strong>{{ page.tutorial_next.title }}</strong>
+      </a>
+    {% endif %}
+  </nav>
+{% endif %}

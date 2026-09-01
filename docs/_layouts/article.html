@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<article class="article">
+  <header class="article-hero shell">
+    <a class="back-link" href="{{ page.back_url | default: '/research/' | relative_url }}"><span aria-hidden="true">←</span> {{ page.back_label | default: 'All research' }}</a>
+    <p class="eyebrow">{{ page.section }}{% if page.date %} · {{ page.date | date: "%d %B %Y" }}{% endif %}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="article-deck">{{ page.subtitle }}</p>{% endif %}
+    {% if page.read_time %}<p class="article-meta">{{ page.read_time }} min read</p>{% endif %}
+  </header>
+
+  {% if page.hero_stat %}
+    <div class="article-feature article-feature--{{ page.accent | default: 'violet' }}">
+      <div class="shell article-feature-inner">
+        <p>{{ page.hero_label }}</p>
+        <strong>{{ page.hero_stat }}</strong>
+        <span>{{ page.hero_caption }}</span>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="article-body shell">
+    <aside class="article-aside" aria-label="Article details">
+      {% if page.tags %}
+        <p class="aside-label">Topics</p>
+        <ul>{% for tag in page.tags %}<li>{{ tag }}</li>{% endfor %}</ul>
+      {% endif %}
+    </aside>
+    <div class="prose">
+      {{ content }}
+    </div>
+  </div>
+
+  <nav class="article-next shell" aria-label="Continue exploring">
+    <p class="eyebrow">Continue exploring</p>
+    {% if page.next_link %}
+      <a href="{{ page.next_link | relative_url }}"><span>{{ page.next_label }}</span><strong>{{ page.next_title }}</strong><i aria-hidden="true">→</i></a>
+    {% else %}
+      <a href="{{ '/tutorials/' | relative_url }}"><span>Use the model</span><strong>Start with the tutorials</strong><i aria-hidden="true">→</i></a>
+    {% endif %}
+  </nav>
+</article>

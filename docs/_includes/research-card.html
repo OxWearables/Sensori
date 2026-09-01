@@ -1,0 +1,15 @@
+<article class="project-card project-card--{{ include.item.accent | default: 'violet' }} reveal">
+  <a class="project-visual" href="{{ include.item.url | relative_url }}" aria-label="Read {{ include.item.title }}">
+    <span class="visual-label">{{ include.item.kicker }}</span>
+    <span class="visual-number" aria-hidden="true">{{ include.item.number }}</span>
+    <span class="visual-signal" aria-hidden="true">
+      {% for value in include.item.signal %}<i style="--h: {{ value }}%"></i>{% endfor %}
+    </span>
+  </a>
+  <div class="project-copy">
+    <p class="eyebrow">{{ include.item.kicker }}</p>
+    <h3><a href="{{ include.item.url | relative_url }}">{{ include.item.title }}</a></h3>
+    <p>{{ include.item.summary }}</p>
+    <a class="text-link" href="{{ include.item.url | relative_url }}">Read case study <span aria-hidden="true">→</span></a>
+  </div>
+</article>

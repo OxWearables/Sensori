@@ -1,0 +1,68 @@
+title: Sensori
+tagline: Learning health from a day in motion
+description: >-
+  Sensori is a self-supervised foundation model that learns general-purpose
+  health representations from 24 hours of raw tri-axial wrist movement.
+url: "https://oxwearables.github.io"
+baseurl: "/Sensori"
+lang: en-GB
+timezone: Europe/London
+
+author:
+  name: Sensori research team
+
+repository_url: "https://github.com/OxWearables/Sensori"
+
+links:
+  paper: "https://arxiv.org/abs/2608.29494"
+  code: "https://github.com/OxWearables/Sensori"
+  model: "https://huggingface.co/light156/Sensori"
+
+markdown: kramdown
+permalink: pretty
+future: false
+
+collections:
+  research:
+    output: false
+  tutorials:
+    output: true
+    permalink: /tutorials/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: article
+      section: Technical note
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: article
+      section: Research
+  - scope:
+      path: ""
+      type: tutorials
+    values:
+      layout: tutorial
+      section: Tutorial
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

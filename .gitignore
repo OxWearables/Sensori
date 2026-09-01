@@ -1,0 +1,74 @@
+# Local Jekyll build and dependency artifacts
+/.bundle/
+/.jekyll-cache/
+/.sass-cache/
+/_site/
+/vendor/
+
+# Python bytecode, caches, builds and environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+.venv/
+venv/
+env/
+# Local development-only dependency overlays
+/requirements-gpu-cu13.txt
+
+
+# Jupyter
+.ipynb_checkpoints/
+/tutorials/.cache/huggingface/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Experiment tracking and generated outputs
+/wandb/
+/lightning_logs/
+/outputs/
+checkpoint/
+/checkpoints/
+/embeddings/
+
+# Local data and model artifacts
+/data/
+/datasets/
+/processed/
+nhanes_data/
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.cwa
+*.cwa.gz
+*.gt3x
+*.gt3x.gz
+*.bin
+*.bin.gz
+
+# Logs, temporary files and operating-system metadata
+*.log
+*.tmp
+*.swp
+*.swo
+.DS_Store
+*.xpt
+nhanes.csv
+MODEL_CARD.md
+tutorial_capture24
+config_eval.yaml
+custom_code

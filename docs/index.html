@@ -1,0 +1,209 @@
+---
+layout: default
+title: Learning health from a day in motion
+description: A self-supervised foundation model for 24-hour wrist movement.
+---
+
+<section class="hero">
+  <div class="shell hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">A foundation model for human movement</p>
+      <h1>Learning health from a day in <em>motion.</em></h1>
+      <p class="hero-deck">Sensori learns general-purpose health representations directly from 24 hours of raw wrist movement—preserving the rhythms, transitions and context that conventional summaries leave behind.</p>
+      <div class="hero-actions">
+        {% if site.links.paper != "" %}<a class="button" href="{{ site.links.paper }}">Read the paper <span aria-hidden="true">↗</span></a>{% else %}<a class="button" href="{{ '/resources/' | relative_url }}">Paper &amp; resources <span aria-hidden="true">→</span></a>{% endif %}
+        <a class="text-link" href="{{ '/tutorials/' | relative_url }}">Explore the tutorials <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+
+    <div class="hero-signal" aria-label="Animated tri-axial wrist movement signal">
+      <div class="signal-meta"><span>00:00</span><span>24:00</span></div>
+      <div class="motion-plot" aria-hidden="true">
+        <canvas data-motion-signal></canvas>
+        <div class="axis-legend"><span>x</span><span>y</span><span>z</span></div>
+        <div class="activity-regions"><span>rest</span><span>walking</span><span>daily activity</span><span>sleep</span></div>
+      </div>
+      <div class="signal-caption">
+        <strong>24 hours</strong>
+        <span>one continuous representation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="metrics-band" aria-label="Study scale">
+  <div class="shell metrics-grid">
+    <div><strong>122,640</strong><span>participants</span></div>
+    <div><strong>683,617</strong><span>person-days</span></div>
+    <div><strong>24 hours</strong><span>per representation</span></div>
+    <div><strong>10 Hz</strong><span>raw tri-axial signal</span></div>
+  </div>
+</section>
+
+<section class="section shell results-section">
+  <div class="section-heading compact-heading">
+    <div><p class="eyebrow">Main results</p><h2>A day of movement reaches further.</h2></div>
+    <p>Sensori moves from pre-defined movement signals towards one representation evaluated across behaviour, populations and health outcomes.</p>
+  </div>
+
+  <div class="landscape-grid">
+    <figure class="landscape-card reveal" aria-labelledby="diagnosis-landscape-title">
+      <header>
+        <p class="chart-index">01 / Classification</p>
+        <h3 id="diagnosis-landscape-title">Prevalent disease</h3>
+      </header>
+      <div class="landscape-chart" aria-hidden="true">
+        <span class="landscape-y-label">Outcomes with reported added value</span>
+        <div class="landscape-y-ticks"><span>52</span><span>26</span><span>0</span></div>
+        <div class="landscape-plot">
+          {% for study in site.data.landing_page_literature %}
+            {% if study.plot_panel == "diagnosis" %}
+              <span class="landscape-point {{ study.point_class }}" style="--point-x: {{ study.plot_x }}%; --point-y: {{ study.plot_y }}%;">
+                <i></i><b>{{ study.study }}</b><small>{{ study.plot_label }}</small>
+              </span>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="landscape-x-ticks"><span style="--tick-x: 10%;">8 h</span><span style="--tick-x: 39%;">24 h</span><span style="--tick-x: 90%;">7 d</span></div>
+        <span class="landscape-x-label">Represented recording span · log scale</span>
+      </div>
+      <figcaption>Sensori improved 52 of 102 conditions beyond clinical covariates. Prior studies use different outcomes and comparators.</figcaption>
+    </figure>
+
+    <figure class="landscape-card reveal" aria-labelledby="prognosis-landscape-title">
+      <header>
+        <p class="chart-index">02 / Prediction</p>
+        <h3 id="prognosis-landscape-title">Incident disease</h3>
+      </header>
+      <div class="landscape-chart" aria-hidden="true">
+        <span class="landscape-y-label">Outcomes with reported added value</span>
+        <div class="landscape-y-ticks"><span>26</span><span>13</span><span>0</span></div>
+        <div class="landscape-plot">
+          {% for study in site.data.landing_page_literature %}
+            {% if study.plot_panel == "prognosis" %}
+              <span class="landscape-point {{ study.point_class }}" style="--point-x: {{ study.plot_x }}%; --point-y: {{ study.plot_y }}%;">
+                <i></i><b>{{ study.study }}</b><small>{{ study.plot_label }}</small>
+              </span>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="landscape-x-ticks"><span style="--tick-x: 10%;">8 h</span><span style="--tick-x: 39%;">24 h</span><span style="--tick-x: 90%;">7 d</span></div>
+        <span class="landscape-x-label">Represented recording span · log scale</span>
+      </div>
+      <figcaption>Sensori improved six-year risk prediction for 26 of 87 conditions.</figcaption>
+    </figure>
+  </div>
+
+  <div class="landscape-notes">
+    <p><span class="legend-dot legend-dot-sensori"></span>Sensori: paired-bootstrap 95% CI excludes zero</p>
+    <p><span class="legend-dot legend-dot-prior"></span>Selected wearable studies: study-specific comparator</p>
+    <p>Sources: <a href="https://proceedings.mlr.press/v267/erturk25a.html">WBM</a>; <a href="https://arxiv.org/abs/2607.06617">Inertia-1</a>; <a href="https://arxiv.org/abs/2605.22759">SensorFM</a>; <a href="https://doi.org/10.1038/s41591-023-02440-2">Schalkamp et al.</a></p>
+  </div>
+
+  <div class="evidence-heading">
+    <p class="eyebrow">Evidence index</p>
+    <h3>One signal, tested from minutes to years.</h3>
+  </div>
+  <div class="result-grid">
+    <article class="result-card result-card-coral reveal">
+      <div class="comparison-key" aria-hidden="true">
+        <span><i></i><b>Handcrafted</b></span>
+        <span><i></i><b>Time-series</b><small>MOMENT · Chronos-2</small></span>
+        <span><i></i><b>Movement</b><small>Bio-PM · Harnet</small></span>
+      </div>
+      <div><p class="result-label">Five baselines</p><h3>Across model families</h3><p>Sensori was evaluated against handcrafted features, general-purpose time-series models and domain-specific movement models.</p></div>
+    </article>
+    <article class="result-card result-card-violet reveal">
+      <div class="trait-composition" aria-label="18 traits: 6 physical-activity, 5 step and 7 sleep traits">
+        <span style="--trait-size: 6"><b>6</b><small>activity</small></span>
+        <span style="--trait-size: 5"><b>5</b><small>steps</small></span>
+        <span style="--trait-size: 7"><b>7</b><small>sleep</small></span>
+      </div>
+      <div><p class="result-label">18 behavioural traits</p><h3>A day keeps its structure</h3><p>Frozen day embeddings retained six physical-activity, five step and seven sleep measures.</p></div>
+    </article>
+    <article class="result-card result-card-blue reveal">
+      <div class="cohort-connections" role="img" aria-label="Four cohorts across the United Kingdom, China and the United States">
+        <span class="cohort-country"><b>United Kingdom</b><small>UKB · ELSA</small></span>
+        <i aria-hidden="true"></i>
+        <span class="cohort-country"><b>China</b><small>CKB</small></span>
+        <i aria-hidden="true"></i>
+        <span class="cohort-country"><b>United States</b><small>NHANES</small></span>
+      </div>
+      <div><p class="result-label">Four population cohorts</p><h3>Across three countries</h3><p>Health-related information transferred across UKB, CKB, ELSA and NHANES without refitting.</p></div>
+    </article>
+    <article class="result-card result-card-lime reveal">
+      <div class="disease-pair" aria-label="52 of 102 prevalent and 26 of 87 incident disease outcomes improved">
+        <div><span style="--fraction: 50.98%"></span><b>52/102</b><small>classification</small></div>
+        <div><span style="--fraction: 29.89%"></span><b>26/87</b><small>six-year risk</small></div>
+      </div>
+      <div><p class="result-label">Disease outcomes</p><h3>Beyond clinical covariates</h3><p>Sensori added predictive information for prevalent classification and six-year incident risk prediction in UKB.</p></div>
+    </article>
+  </div>
+</section>
+
+<section class="closer-section">
+  <div class="section shell">
+    <div class="section-heading compact-heading">
+      <div><p class="eyebrow">Selected results</p><h2>A closer look at the signal.</h2></div>
+      <p>Three views of the same representation: local activities, population-level characteristics and one disease example.</p>
+    </div>
+
+    <div class="closer-grid">
+      <figure class="detail-card detail-card-har reveal" aria-labelledby="har-title">
+        <header><p class="chart-index">01 / Minute scale</p><h3 id="har-title">Activity recognition</h3></header>
+        <div class="benchmark-key"><span><i></i>Sensori Cohen’s κ</span><span>Rank among six approaches</span></div>
+        <div class="benchmark-list">
+          <div><span>PAMAP2 <small>1st</small></span><i><b style="--score: 85.2%"></b></i><strong>0.852 <small>± 0.077</small></strong></div>
+          <div><span>RealWorld <small>1st</small></span><i><b style="--score: 82.4%"></b></i><strong>0.824 <small>± 0.026</small></strong></div>
+          <div><span>WISDM <small>2nd</small></span><i><b style="--score: 80.7%"></b></i><strong>0.807 <small>± 0.081</small></strong></div>
+          <div><span>CAPTURE-24 <small>2nd</small></span><i><b style="--score: 82.6%"></b></i><strong>0.826 <small>± 0.012</small></strong></div>
+        </div>
+        <figcaption>Mean Cohen’s κ ± s.d. across five participant-wise cross-validation folds. Sensori ranked first on PAMAP2 and RealWorld and second to Harnet on WISDM and CAPTURE-24.</figcaption>
+      </figure>
+
+      <figure class="detail-card detail-card-cohort reveal" aria-labelledby="cohort-title">
+        <header><p class="chart-index">02 / Day scale</p><h3 id="cohort-title">Across cohorts</h3></header>
+        <div class="cohort-matrix" role="table" aria-label="Prediction performance for sex, age and BMI across four cohorts">
+          <div class="matrix-row matrix-head" role="row">
+            <span role="columnheader">Cohort</span><span role="columnheader">Sex<small>AUROC</small></span><span role="columnheader">Age<small>Pearson’s r</small></span><span role="columnheader">BMI<small>Pearson’s r</small></span>
+          </div>
+          <div class="matrix-row" role="row"><b role="rowheader">UKB</b><span class="metric-sex" role="cell">0.996</span><span class="metric-age" role="cell">0.837</span><span class="metric-bmi" role="cell">0.733</span></div>
+          <div class="matrix-row" role="row"><b role="rowheader">CKB</b><span class="metric-sex" role="cell">0.969</span><span class="metric-age" role="cell">0.765</span><span class="metric-bmi" role="cell">0.511</span></div>
+          <div class="matrix-row" role="row"><b role="rowheader">ELSA</b><span class="metric-sex" role="cell">0.988</span><span class="metric-age" role="cell">0.846</span><span class="metric-bmi" role="cell">0.710</span></div>
+          <div class="matrix-row" role="row"><b role="rowheader">NHANES</b><span class="metric-sex" role="cell">0.976</span><span class="metric-age" role="cell">0.677</span><span class="metric-bmi" role="cell">0.596</span></div>
+        </div>
+        <figcaption>Linear probes were fitted in UKB and evaluated without refitting in held-out UKB, CKB, ELSA and NHANES. Metric families are separated rather than encoded on one shared colour scale.</figcaption>
+      </figure>
+
+      <figure class="detail-card detail-card-disease reveal" aria-labelledby="disease-title">
+        <div class="disease-copy">
+          <header><p class="chart-index">03 / Health outcome</p><h3 id="disease-title">Multiple sclerosis</h3></header>
+          <p>A high-signal example of prevalent-disease classification in the held-out UKB test set.</p>
+          <p class="disease-caveat">This is a population-level classification result, not an individual diagnostic product.</p>
+        </div>
+        <div class="delta-plot" role="img" aria-label="Clinical baseline compared with clinical plus Sensori: delta AUROC 0.242, paired-bootstrap 95% confidence interval 0.174 to 0.308">
+          <div class="delta-axis"><span>0</span><span>0.08</span><span>0.16</span><span>0.24</span><span>0.32</span></div>
+          <div class="delta-row delta-baseline"><span>Clinical baseline</span><i><b></b></i><strong>reference</strong></div>
+          <div class="delta-row delta-sensori"><span>Clinical + Sensori</span><i><em style="--ci-start: 54.38%; --ci-width: 41.87%"></em><b style="--delta: 75.63%"></b></i><strong>+0.242</strong></div>
+          <p>ΔAUROC <b>0.242</b> · paired-bootstrap 95% CI, 0.174–0.308</p>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="results-cta">
+  <div class="shell results-cta-grid">
+    <div>
+      <p class="eyebrow">Continue reading</p>
+      <h2>The result is the beginning.</h2>
+    </div>
+    <div>
+      <p>Read the ideas behind Sensori, then explore the manuscript, code and practical guides as they become available.</p>
+      <div class="results-cta-links">
+        <a class="button button-light" href="{{ '/white-paper/' | relative_url }}">Read the white paper <span aria-hidden="true">→</span></a>
+        <a class="text-link text-link-light" href="{{ '/resources/' | relative_url }}">Paper &amp; resources <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>

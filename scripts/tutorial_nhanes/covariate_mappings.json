@@ -1,0 +1,302 @@
+{
+    "categorical_mappings": {
+        "Morning/evening person (chronotype)": {
+            "More a 'morning' than 'evening' person": 1,
+            "Definitely a 'morning' person": 1,
+            "More an 'evening' than a 'morning' person": 0,
+            "Definitely an 'evening' person": 0
+        },
+        "Current tobacco smoking": {
+            "No": 0,
+            "Yes": 1,
+            "Yes, on most or all days": 1,
+            "Only occasionally": 1
+        },
+        "Nap during day": {
+            "Never/rarely": 0,
+            "Sometimes": 1,
+            "Usually": 1
+        },
+        "Overall health rating": {
+            "Excellent": 1,
+            "Very good": 1,
+            "Good": 1,
+            "Fair": 0,
+            "Poor": 0,
+            "Do not know": null,
+            "Don't know": null,
+            "Prefer not to answer": null,
+            "Refused": null,
+            "NaN": null
+        },
+        "Long-standing illness, disability or infirmity": {
+            "No": 0,
+            "Yes": 1,
+            "Do not know": 0,
+            "Prefer not to answer": null
+        },
+        "Sex": {
+            "Female": 0,
+            "Male": 1
+        },
+        "Ethnic background": {
+            "British": 1,
+            "Any other white background": 1,
+            "Irish": 1,
+            "White": 1,
+            "White and Asian": 0,
+            "Caribbean": 0,
+            "Chinese": 0,
+            "Pakistani": 0,
+            "White and Black African": 0,
+            "Other ethnic group": 0,
+            "Any other mixed background": 0,
+            "African": 0,
+            "White and Black Caribbean": 0,
+            "Indian": 0,
+            "Any other Black background": 0,
+            "Any other Asian background": 0,
+            "Bangladeshi": 0,
+            "Mixed": 0,
+            "Asian or Asian British": 0,
+            "Black or Black British": 0,
+            "Do not know": null,
+            "Prefer not to answer": null
+        },
+        "Alcohol drinker status": {
+            "Never": 0,
+            "No": 0,
+            "Current": 1,
+            "Yes": 1,
+            "Previous": 0,
+            "Prefer not to answer": null,
+            "Refused": null,
+            "Don't know": null,
+            "NaN": null
+        },
+        "Regular alcohol drinking": {
+            "No": 0,
+            "Yes": 1,
+            "Prefer not to answer": null,
+            "Refused": null,
+            "Don't know": null,
+            "NaN": null
+        },
+        "Getting up in morning": {
+            "Fairly easy": 1,
+            "Very easy": 1,
+            "Not very easy": 0,
+            "Not at all easy": 0,
+            "Do not know": null,
+            "Prefer not to answer": null
+        },
+        "Sleeplessness / insomnia": {
+            "Usually": 1,
+            "Sometimes": 1,
+            "Never/rarely": 0,
+            "Prefer not to answer": null
+        },
+        "Health satisfaction": {
+            "Extremely happy": 1,
+            "Very happy": 1,
+            "Moderately happy": 1,
+            "Moderately unhappy": 0,
+            "Very unhappy": 0,
+            "Extremely unhappy": 0,
+            "Do not know": null,
+            "Prefer not to answer": null,
+            "NaN": null
+        },
+        "Frequency of tiredness / lethargy in last 2 weeks": {
+            "Not at all": 0,
+            "Several days": 1,
+            "More than half the days": 1,
+            "Nearly every day": 1,
+            "Do not know": null,
+            "Prefer not to answer": null,
+            "NaN": null
+        },
+        "Mood swings": {
+            "No": 0,
+            "Yes": 1,
+            "Do not know": null,
+            "Prefer not to answer": null,
+            "NaN": null
+        },
+        "Happiness": {
+            "Extremely happy": 1,
+            "Very happy": 1,
+            "Moderately happy": 1,
+            "Moderately unhappy": 0,
+            "Very unhappy": 0,
+            "Extremely unhappy": 0,
+            "Do not know": null,
+            "Prefer not to answer": null,
+            "NaN": null
+        },
+        "Snoring": {
+            "No": 0,
+            "Yes": 1,
+            "Prefer not to answer": null,
+            "Do not know": null
+        },
+        "Daytime dozing / sleeping": {
+            "Never/rarely": 0,
+            "Sometimes": 1,
+            "Often": 1,
+            "All of the time": 1,
+            "Prefer not to answer": null,
+            "Do not know": null
+        },
+        "Usual walking pace": {
+            "Slow pace": 0,
+            "Steady average pace": 0,
+            "Brisk pace": 1,
+            "None of the above": null,
+            "Prefer not to answer": null,
+            "NaN": null
+        },
+        "Frequency of stair climbing in last 4 weeks": {
+            "1-5 times a day": 0,
+            "6-10 times a day": 0,
+            "11-15 times a day": 1,
+            "16-20 times a day": 1,
+            "More than 20 times a day": 1,
+            "Do not know": null,
+            "Prefer not to answer": null,
+            "NaN": null
+        },
+        "Shortness of breath walking on level ground": {
+            "No": 0,
+            "Yes": 1,
+            "Do not know": null,
+            "Prefer not to answer": null,
+            "NaN": null
+        },
+        "Wheeze or whistling in the chest in last year": {
+            "No": 0,
+            "Yes": 1,
+            "Do not know": null,
+            "Prefer not to answer": null,
+            "NaN": null
+        },
+        "Whether has self-reported long-standing illness": {
+            "No": 0,
+            "Yes": 1
+        },
+        "Mobility: difficulty walking 100 yards": {
+            "Not mentioned": 0,
+            "Mentioned": 1
+        },
+        "Mobility: difficulty sitting 2 hours": {
+            "Not mentioned": 0,
+            "Mentioned": 1
+        },
+        "Mobility: difficulty getting up from chair after sitting long periods": {
+            "Not mentioned": 0,
+            "Mentioned": 1
+        },
+        "Mobility: difficulty climbing several flights stairs without resting": {
+            "Not mentioned": 0,
+            "Mentioned": 1
+        },
+        "Mobility: difficulty climbing one flight stairs without resting": {
+            "Not mentioned": 0,
+            "Mentioned": 1
+        },
+        "Mobility: difficulty stooping, kneeling or crouching": {
+            "Not mentioned": 0,
+            "Mentioned": 1
+        },
+        "Mobility: difficulty reaching or extending arms above shoulder level": {
+            "Not mentioned": 0,
+            "Mentioned": 1
+        },
+        "Mobility: difficulty pulling or pushing large objects": {
+            "Not mentioned": 0,
+            "Mentioned": 1
+        },
+        "Mobility: difficulty lifting or carrying weights over 10 pounds": {
+            "Not mentioned": 0,
+            "Mentioned": 1
+        },
+        "Mobility: difficulty picking up 5p coin from table": {
+            "Not mentioned": 0,
+            "Mentioned": 1
+        },
+        "trouble_sleeping": {
+            "Yes": 1,
+            "No": 0,
+            "Refused": null,
+            "Don't know": null
+        },
+        "difficulty_walk_quarter_mile": {
+            "$ref": "nhanes_pfq_difficulty"
+        },
+        "difficulty_walk_ten_steps": {
+            "$ref": "nhanes_pfq_difficulty"
+        },
+        "difficulty_stoop_crouch_kneel": {
+            "$ref": "nhanes_pfq_difficulty"
+        },
+        "difficulty_lift_carry": {
+            "$ref": "nhanes_pfq_difficulty"
+        },
+        "difficulty_house_chores": {
+            "$ref": "nhanes_pfq_difficulty"
+        },
+        "difficulty_prepare_meals": {
+            "$ref": "nhanes_pfq_difficulty"
+        },
+        "difficulty_walk_between_rooms": {
+            "$ref": "nhanes_pfq_difficulty"
+        },
+        "difficulty_stand_from_chair": {
+            "$ref": "nhanes_pfq_difficulty"
+        },
+        "difficulty_get_in_out_bed": {
+            "$ref": "nhanes_pfq_difficulty"
+        },
+        "difficulty_eat_utensils": {
+            "$ref": "nhanes_pfq_difficulty"
+        },
+        "difficulty_dress_self": {
+            "$ref": "nhanes_pfq_difficulty"
+        },
+        "difficulty_stand_long": {
+            "$ref": "nhanes_pfq_difficulty"
+        },
+        "difficulty_sit_long": {
+            "$ref": "nhanes_pfq_difficulty"
+        },
+        "difficulty_reach_overhead": {
+            "$ref": "nhanes_pfq_difficulty"
+        },
+        "difficulty_grasp_small_objects": {
+            "$ref": "nhanes_pfq_difficulty"
+        },
+        "difficulty_go_out_events": {
+            "$ref": "nhanes_pfq_difficulty"
+        },
+        "difficulty_attend_social": {
+            "$ref": "nhanes_pfq_difficulty"
+        },
+        "difficulty_leisure_home": {
+            "$ref": "nhanes_pfq_difficulty"
+        },
+        "difficulty_push_pull_large": {
+            "$ref": "nhanes_pfq_difficulty"
+        }
+    },
+    "shared_mappings": {
+        "nhanes_pfq_difficulty": {
+            "No difficulty": 0,
+            "Some difficulty": 1,
+            "Much difficulty": 1,
+            "Unable to do": 1,
+            "Do not do this activity": null,
+            "Refused": null,
+            "Don't know": null
+        }
+    }
+}
